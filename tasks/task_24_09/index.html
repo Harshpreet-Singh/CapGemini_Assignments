@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .img{
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+        .img1{
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .img2{
+            top: 6rem;
+            left: 4rem;
+            z-index: 2;
+        }
+        .img3{
+            top: 12rem;
+            left: 8rem;
+            z-index: 3;
+        }
+        .img > img{
+            box-shadow: 15px 15px 5px rgba(0,0,0,0.5);
+            border-radius: 10px;
+        }
+        
+        /* .img > img:hover{
+            transform: scale(1.1); 
+            transition: all 0.5s ease;
+        } */
+        /* the above approach did not have z-index working so using the approach written below [ this was because lines above z-index:1,2,3 respectively were provided to parent(div) not to img tag ] */
+
+        .img1:hover,.img2:hover,.img3:hover{
+            transform: scale(1.1);
+            z-index: 4;
+        }
+        .img1:hover{
+            transform: translate(2rem, 2rem);
+        }
+        .img2:hover{
+            transform: skew(20deg, 10deg);
+        }
+        .img3:hover{
+            transform: rotate(360deg);
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="img img1">
+            <img src="img1.webp" alt="img1" srcset="">
+        </div>
+        <div class="img img2">
+            <img src="img2.webp" alt="img2" srcset="">
+        </div>
+        <div class="img img3">
+            <img src="img3.webp" alt="img3" srcset="">
+        </div>
+    </div>
+</body>
+</html>

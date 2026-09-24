@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 02</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    /* Dashboard background with Linear Gradient */
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    /* Flexbox grid for Cards */
+    .dashboard-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    /* Student Cards with Radial Gradients */
+    .student-card {
+      width: 280px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card-1 {
+      background: radial-gradient(circle at top left, #3a7bd5, #3a6073);
+    }
+
+    .card-2 {
+      background: radial-gradient(circle at center, #8e2de2, #4a00e0);
+    }
+
+    .card-3 {
+      background: radial-gradient(circle at bottom right, #f857a6, #ff5858);
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .student-card h2 { margin-bottom: 8px; font-size: 20px; }
+    .student-card p { font-size: 14px; opacity: 0.9; margin-bottom: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>Student Dashboard</h1>
+
+  <div class="dashboard-grid">
+    <div class="student-card card-1">
+      <div class="avatar">👨‍🎓</div>
+      <h2>John Doe</h2>
+      <p>ID: ST1001</p>
+      <p>Course: Computer Science</p>
+    </div>
+
+    <div class="student-card card-2">
+      <div class="avatar">👩‍🎓</div>
+      <h2>Jane Smith</h2>
+      <p>ID: ST1002</p>
+      <p>Course: Information Technology</p>
+    </div>
+
+    <div class="student-card card-3">
+      <div class="avatar">👨‍💻</div>
+      <h2>Alex Johnson</h2>
+      <p>ID: ST1003</p>
+      <p>Course: Software Engineering</p>
+    </div>
+  </div>
+
+</body>
+</html>
